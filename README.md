@@ -129,9 +129,6 @@ The project includes several Entity Framework Core migrations to manage the data
 
 * **Resource assessment updates**: Implements further schema modifications based on resource assessments.
 
-## License
-
-\[Specify your license here, for example: `MIT License`, `Apache 2.0 License`, or state that it's `Proprietary` if no public license is intended.\]
 
 ## Contact
 
