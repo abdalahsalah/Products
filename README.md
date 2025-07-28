@@ -111,6 +111,10 @@ This application offers the following key features:
 
 * **Client-Side Validation**: Forms incorporate client-side validation for immediate user feedback and improved data integrity.
 
+## preview
+
+https://github.com/user-attachments/assets/d6437bff-3e9a-4f61-8691-79649b31cea2
+
 ## Configuration
 
 Database connection strings and other environment-specific settings can be configured in the **`appsettings.json`** file.
