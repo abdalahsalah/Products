@@ -1,0 +1,45 @@
+﻿@model Products
+@{
+    SelectList selectListItems = new SelectList(ViewBag.Cate, "Id", "Name");
+    ViewData["Title"] = "Add Product";
+}
+<partial name="_ValidationScriptsPartial" />
+<div class="container py-5">
+    <div class="bg-white rounded shadow p-5 border-start border-5 border-primary">
+        <h2 class="text-center text-primary mb-4">🛒 Add New Product</h2>
+
+        <form method="post">
+            <div class="mb-3">
+                <label asp-for="Title" class="form-label fw-bold">Title</label>
+                <input asp-for="Title" class="form-control border-primary" placeholder="Enter product title" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Price" class="form-label fw-bold">Price ($)</label>
+                <input asp-for="Price" type="number" class="form-control border-success" placeholder="e.g. 100.50" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="quantity" class="form-label fw-bold">Quantity</label>
+                <input asp-for="quantity" type="number" class="form-control border-warning" placeholder="e.g. 50" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="categoriesId" class="form-label fw-bold">Category</label>
+                <select asp-for="categoriesId" asp-items="@selectListItems" class="form-select border-info">
+                    <option disabled selected>-- Choose a category --</option>
+                </select>
+            </div>
+
+            <div class="text-center mt-4">
+                <button type="submit" class="btn btn-lg btn-primary px-5 shadow">Create</button>
+            </div>
+        </form>
+    </div>
+</div>
